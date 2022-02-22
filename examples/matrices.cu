@@ -33,6 +33,26 @@ int main()
         }
     }
     cudatrix::matrixSum(matrix1, matrix2, resultantMatrix, rows, rows1, columns, columns1);
+    printf("Matrix 1: \n");
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            printf("%f ", matrix1[i][j]); // successful sum!
+        }
+        printf("\n");
+    }
+    printf("Matrix 2: \n");
+    for (int i = 0; i < rows1; i++)
+    {
+        for (int j = 0; j < columns1; j++)
+        {
+            printf("%f ", matrix2[i][j]); // successful sum!
+        }
+        printf("\n");
+    }
+    printf("-----------------------------\n");
+    printf("\nSum of both matrices:\n");
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < columns; j++)
@@ -41,4 +61,5 @@ int main()
         }
         printf("\n");
     }
+
 }
