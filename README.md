@@ -4,6 +4,7 @@
 </div>
 I made this repository to learn more about linear algebra and CUDA.
 As of now, CUDAtrix supports these operations:
+
 - Matrix Sum
 - Scalar Sum
 
