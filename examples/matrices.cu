@@ -1,0 +1,44 @@
+#include "../cudatrix.cu"
+#include "stdio.h"
+#include <vector>
+#include <algorithm>
+
+int main()
+{
+    // initialize matrices
+    float **matrix1;
+    float **matrix2;
+    float **resultantMatrix;
+    int rows = 2;
+    int columns = 2;
+    int rows1 = 2;
+    int columns1 = 2;
+    matrix1 = new float *[rows];
+    matrix2 = new float *[rows];
+    resultantMatrix = new float *[rows];
+
+    for (int i = 0; i < rows; i++)
+    {
+        matrix1[i] = new float[columns];
+        matrix2[i] = new float[columns];
+        resultantMatrix[i] = new float[columns];
+    }
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            matrix1[i][j] = 2.0f;
+            matrix2[i][j] = 2.0f;
+            resultantMatrix[i][j] = 0.0f;
+        }
+    }
+    cudatrix::matrixSum(matrix1, matrix2, resultantMatrix, rows, rows1, columns, columns1);
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            printf("%f ", resultantMatrix[i][j]); // successful sum!
+        }
+        printf("\n");
+    }
+}
