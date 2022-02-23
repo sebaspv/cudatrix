@@ -38,7 +38,7 @@ void cudatrix::matrixSum(float **matrix1, float **matrix2, float **resultantMatr
         value1.value = matrix1[i][k];
         value2.value = matrix2[k][j];
         cudatrix::scalarSum(&value1.value, &value2.value);
-        resultantMatrix[i][j] += (value1.value/2);
+        resultantMatrix[i][j] = value1.value;
       }
     }
   }
