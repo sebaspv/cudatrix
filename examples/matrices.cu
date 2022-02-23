@@ -27,9 +27,8 @@ int main()
     {
         for (int j = 0; j < columns; j++)
         {
-            matrix1[i][j] = 2.0f;
-            matrix2[i][j] = 1000.0f;
-            resultantMatrix[i][j] = 0.0f;
+            matrix1[i][j] = 100.0f; // initialize matrix1 with values of 2
+            matrix2[i][j] = 20.0f;  // initialize matrix2 with values of 1000
         }
     }
     cudatrix::matrixSum(matrix1, matrix2, resultantMatrix, rows, rows1, columns, columns1);
@@ -61,5 +60,4 @@ int main()
         }
         printf("\n");
     }
-
 }
