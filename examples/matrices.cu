@@ -27,8 +27,8 @@ int main()
     {
         for (int j = 0; j < columns; j++)
         {
-            matrix1[i][j] = 100.0f; // initialize matrix1 with values of 2
-            matrix2[i][j] = 20.0f;  // initialize matrix2 with values of 1000
+            matrix1[i][j] = 100.0f; // initialize matrix1 with values of 100
+            matrix2[i][j] = 20.0f;  // initialize matrix2 with values of 20
         }
     }
     cudatrix::matrixSum(matrix1, matrix2, resultantMatrix, rows, rows1, columns, columns1);
