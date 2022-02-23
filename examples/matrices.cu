@@ -28,7 +28,7 @@ int main()
         for (int j = 0; j < columns; j++)
         {
             matrix1[i][j] = 2.0f;
-            matrix2[i][j] = 2.0f;
+            matrix2[i][j] = 1000.0f;
             resultantMatrix[i][j] = 0.0f;
         }
     }
@@ -38,7 +38,7 @@ int main()
     {
         for (int j = 0; j < columns; j++)
         {
-            printf("%f ", matrix1[i][j]); // successful sum!
+            printf("%f ", matrix1[i][j]);
         }
         printf("\n");
     }

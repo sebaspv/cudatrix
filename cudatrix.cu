@@ -25,21 +25,20 @@ void cudatrix::scalarSum(float *a, float *b)
 
 void cudatrix::matrixSum(float **matrix1, float **matrix2, float **resultantMatrix, int rows_1, int rows_2, int columns_1, int columns_2)
 {
-  float value1;
-  float value2;
+  cudatrix::Scalar value1;
+  cudatrix::Scalar value2;
 
   for (int i = 0; i < rows_1; i++)
   {
     for (int j = 0; j < columns_2; j++)
     {
-      resultantMatrix[i][j] = 0.0f;
+      resultantMatrix[i][j] = 0.0;
       for (int k = 0; k < rows_2; k++)
       {
-        value1 = matrix1[i][k];
-        value2 = matrix2[k][j];
-        scalarSumKernel<<<1, 1>>>(&value1, &value2);
-        cudaDeviceSynchronize();
-        resultantMatrix[i][j] += value1;
+        value1.value = matrix1[i][k];
+        value2.value = matrix2[k][j];
+        cudatrix::scalarSum(&value1.value, &value2.value);
+        resultantMatrix[i][j] += (value1.value/2);
       }
     }
   }
