@@ -1,7 +1,5 @@
 #include "../cudatrix.cu"
 #include "stdio.h"
-#include <vector>
-#include <algorithm>
 
 int main()
 {
