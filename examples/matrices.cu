@@ -31,7 +31,7 @@ int main()
             matrix2[i][j] = 20.0f;  // initialize matrix2 with values of 20
         }
     }
-    cudatrix::matrixSum(matrix1, matrix2, resultantMatrix, rows, rows1, columns, columns1);
+    cudatrix::matrixMult(matrix1, matrix2, resultantMatrix, rows, rows1, columns, columns1);
     printf("Matrix 1: \n");
     for (int i = 0; i < rows; i++)
     {
@@ -51,7 +51,7 @@ int main()
         printf("\n");
     }
     printf("-----------------------------\n");
-    printf("\nSum of both matrices:\n");
+    printf("\nMultiplication of both matrices:\n");
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < columns; j++)
