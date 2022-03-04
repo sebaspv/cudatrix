@@ -7,10 +7,10 @@ As of now, CUDAtrix supports these operations:
 
 - Matrix Sum
 - Scalar Sum
-
-And I'm planning on adding these operations:
 - Matrix Multiplication
 - Scalar Multiplication
+
+And I'm planning on adding these operations:
 - Vector Operations
 
 All of the example usage of CUDAtrix functions is in the `/examples` directory.
