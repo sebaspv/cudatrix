@@ -7,7 +7,6 @@ For a copy, see <https://opensource.org/licenses/MIT>.
 
 
 #pragma once
-#include <vector>
 
 namespace cudatrix
 {

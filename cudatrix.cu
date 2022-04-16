@@ -1,6 +1,5 @@
 #include "kernel.cuh"
 #include <cuda_runtime.h>
-#include "stdio.h"
 
 
 __global__ void scalarSumKernel(float *scalar1, float *scalar2)
